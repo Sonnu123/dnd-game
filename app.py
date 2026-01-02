@@ -13,6 +13,9 @@ load_dotenv()
 
 app = FastAPI()
 
+# Get the directory where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
@@ -136,22 +139,22 @@ CLASS_BONUSES = {
     "Monk": "WIS"
 }
 
-# HTML page routes
+# HTML page routes - WITH ABSOLUTE PATHS
 @app.get("/")
 async def read_root():
-    return FileResponse("start.html")
+    return FileResponse(os.path.join(BASE_DIR, "start.html"))
 
 @app.get("/race")
 async def race():
-    return FileResponse("Race.html")
+    return FileResponse(os.path.join(BASE_DIR, "Race.html"))
 
 @app.get("/class")
 async def class_selection():
-    return FileResponse("class.html")
+    return FileResponse(os.path.join(BASE_DIR, "class.html"))
 
 @app.get("/game")
 async def game():
-    return FileResponse("game.html")
+    return FileResponse(os.path.join(BASE_DIR, "game.html"))
 
 # API endpoints
 @app.post("/save_players")
