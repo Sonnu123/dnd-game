@@ -1,4 +1,4 @@
-# Medieval Adventures - play it here! (https://embervale-production.up.railway.app/campaigns/new)
+# Play it here! (https://embervale-production.up.railway.app/campaigns/new)
 
 
 
