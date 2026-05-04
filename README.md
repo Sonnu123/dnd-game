@@ -7,7 +7,7 @@
 
 
 
-# Medieval Adventures
+# Medieval Adventures(for local use)
 
 AI-powered Dungeons & Dragons game with character creation and immersive gameplay.
 
